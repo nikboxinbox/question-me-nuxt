@@ -47,24 +47,58 @@ const postRegisterForm = async () => {
         .rounded-md.shadow-sm.-space-y-px.mb-1
           div
             label.sr-only(for='name') Name
-            input#name.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(v-model='name' name='name' required='' class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' :class="errors.has('name') ? ' border-red-500' : ''" placeholder='Name')
+            input#name.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(
+              v-model='name'
+              name='name' 
+              required='' 
+              class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' 
+              )
+              //- :class="errors.has('name') ? ' border-red-500' : ''" placeholder='Name'
         .rounded-md.shadow-sm.-space-y-px.mb-1
           div
             label.sr-only(for='email-address') Username
-            input#username.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(type='email' v-model='username' name='username' required='' class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' :class="errors.has('username') ? ' border-red-500' : ''" placeholder='username')
+            input#username.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(
+              type='email' 
+              v-model='username' 
+              name='username' 
+              required='' 
+              class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' 
+              )
+              //- :class="errors.has('username') ? ' border-red-500' : ''" placeholder='username'
         .rounded-md.shadow-sm.-space-y-px.mb-1
           div
             label.sr-only(for='email-address') Email address
-            input#email-address.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(v-model='email' name='email' type='email' autocomplete='email' required='' class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' :class="errors.has('email') ? ' border-red-500' : ''" placeholder='Email address')
+            input#email-address.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-t-md(
+              v-model='email' 
+              name='email' 
+              type='email' 
+              autocomplete='email' 
+              required='' 
+              class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' 
+              )
+              //- :class="errors.has('email') ? ' border-red-500' : ''" placeholder='Email address'
         div
           label.sr-only(for='password') Password
-          input#password.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-b-md(v-model='password' name='password' type='password' autocomplete='current-password' required='' class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' :class="errors.has('password') ? ' border-red-500' : ''" placeholder='Password')
+          input#password.appearance-none.rounded-none.relative.block.w-full.px-3.py-2.border.border-gray-300.placeholder-gray-500.text-gray-900.rounded-b-md(
+            v-model='password' 
+            name='password' 
+            type='password' 
+            autocomplete='current-password' 
+            required='' 
+            class='dark:bg-slate-500 dark:text-white dark:placeholder-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm' 
+            )
+            //- :class="errors.has('password') ? ' border-red-500' : ''" placeholder='Password'
         .flex.items-center.justify-between
           .text-sm
-            a.font-medium.text-indigo-600(href='#' class='hover:text-indigo-500')
-              | Forgot your password?
+            a.font-medium.text-indigo-600(
+              href='#' 
+              class='hover:text-indigo-500'
+              ) Forgot your password?
         div
-      button.mt-5.group.relative.w-full.flex.justify-center.py-2.px-4.border.border-transparent.text-sm.font-medium.rounded-md.text-white.bg-indigo-600(@click.prevent='postRegisterForm' class='hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500')
+      button.mt-5.group.relative.w-full.flex.justify-center.py-2.px-4.border.border-transparent.text-sm.font-medium.rounded-md.text-white.bg-indigo-600(
+        @click.prevent='postRegisterForm' 
+        class='hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+        )
         span.absolute.left-0.inset-y-0.flex.items-center.pl-3
           // Heroicon name: solid/lock-closed
           svg.h-5.w-5.text-indigo-500(class='group-hover:text-indigo-400' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
