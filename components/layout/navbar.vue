@@ -30,19 +30,22 @@ const setColorTheme = (newTheme: Theme) => {
         nuxt-link(to='/state-examples')
           span.text-base.font-medium.text-gray-500(class='hover:text-gray-900')
             | State in Nuxt
-        nuxt-link(to='/ask-jack/search')
+        nuxt-link(to='/ask-me/search')
           span.text-base.font-medium.text-gray-500(class='hover:text-gray-900')
-            | Ask Jack
+            | Ask me
         nuxt-link(to='/dashboard')
           span.text-base.font-medium.text-gray-500(class='hover:text-gray-900')
             | Dashboard
       .hidden.items-center.justify-end(class='md:flex md:flex-1 lg:w-0')
-        nuxt-link.whitespace-nowrap.text-base.font-medium.text-gray-500(v-if='!user' to='/login' class='hover:text-gray-900')
-          | Sign
-          | in
-        User(v-if='user' :user='user')
-          nuxt-link.transition.duration-500.ml-8.whitespace-nowrap.inline-flex.items-center.justify-center.px-4.py-2.border.border-transparent.rounded-md.shadow-sm.text-base.font-medium.text-white.bg-indigo-600(v-if='!user' to='/register' class='hover:scale-110 hover:bg-indigo-700')
-            | Sign up
+        nuxt-link.whitespace-nowrap.text-base.font-medium.text-gray-500(
+          v-if='!user' to='/login' class='hover:text-gray-900'
+          ) Sign in
+        //- User(v-if='user' :user='user')
+        nuxt-link.transition.duration-500.ml-8.whitespace-nowrap.inline-flex.items-center.justify-center.px-4.py-2.border.border-transparent.rounded-md.shadow-sm.text-base.font-medium.text-white.bg-indigo-600(
+          v-if='!user' 
+          to='/register' 
+          class='hover:scale-110 hover:bg-indigo-700'
+          ) Sign up
           
       button.hidden(class='md:block' @click="setColorTheme($colorMode.preference == 'dark' ? 'light' : 'dark')")
         svg.h-6.w-6.text-gray-50(v-if="$colorMode.value == 'dark'" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor')

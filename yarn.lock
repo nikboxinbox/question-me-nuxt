@@ -3407,7 +3407,7 @@ gzip-size@^7.0.0:
 
 h3@^1.6.6:
   version "1.6.6"
-  resolved "https://registry.npmjs.org/h3/-/h3-1.6.6.tgz"
+  resolved "https://registry.yarnpkg.com/h3/-/h3-1.6.6.tgz#f7da8517ae3bf906716975e38f2d3c24ab79a239"
   integrity sha512-DWu2s11OuuO9suEkX99dXaJoxd1RgPXiM4iDmLdrhGV63GLoav13f3Kdd5/Rw7xNKzhzn2+F2dleQjG66SnMPQ==
   dependencies:
     cookie-es "^1.0.0"

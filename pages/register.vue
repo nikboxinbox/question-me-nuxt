@@ -21,17 +21,29 @@ const postRegisterForm = async () => {
       .flex
         img.mx-auto.h-24.w-auto(src='/img/logo_clear_fsj.png' alt='full stack jack logo')
         h1.py-9.text-center.text-5xl.font-extrabold.text-gray-900(class='dark:text-gray-400')
-          | Full Stack Jack
+          | App 
       div
         h2.text-center.text-3xl.font-extrabold.mt-5.text-gray-900(class='dark:text-white')
           | Sign Up
-      .bg-red-100.border.border-red-400.text-red-700.px-4.py-3.rounded.relative.mt-3(v-if='response.hasErrors && errors' role='alert')
+      .bg-red-100.border.border-red-400.text-red-700.px-4.py-3.rounded.relative.mt-3(
+        v-if='hasErrors' 
+        role='alert'
+        )
         strong.font-bold Oops, try again! 
-        ul.block(class='sm:inline')
-          li(v-for='[key, value] in errors')
-            | {{ value.check.errorMessage }}
-      form.mt-8.space-y-6(v-on:submit.prevent='' action='#' method='POST')
-        input(type='hidden' name='remember' value='true')
+        span {{ errorMessage }}
+        //- ul.block(class='sm:inline') 
+          //- li(v-for='[key, value] in errors')
+          //-   | {{ value.check.errorMessage }}
+      form.mt-8.space-y-6(
+        v-on:submit.prevent=''
+        action='#' 
+        method='POST'
+        )
+        input(
+          type='hidden' 
+          name='remember' 
+          value='true'
+          )
         .rounded-md.shadow-sm.-space-y-px.mb-1
           div
             label.sr-only(for='name') Name
@@ -57,6 +69,6 @@ const postRegisterForm = async () => {
           // Heroicon name: solid/lock-closed
           svg.h-5.w-5.text-indigo-500(class='group-hover:text-indigo-400' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true')
             path(fill-rule='evenodd' d='M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z' clip-rule='evenodd')
-        |           register
+        | register
 
 </template>
